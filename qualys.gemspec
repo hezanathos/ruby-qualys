@@ -4,6 +4,7 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'qualys/version'
+require 'webmock/rspec'
 
 Gem::Specification.new do |s|
   s.name        = 'qualys'
@@ -24,7 +25,7 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
 
   s.add_dependency 'erubis'
-  s.add_dependency 'httparty'
+  s.add_dependency 'httparty', '~> 0.15'
   s.add_dependency 'json'
 
   s.add_development_dependency 'bundler'
